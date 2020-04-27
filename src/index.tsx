@@ -5,17 +5,9 @@ interface AppProps {
   color?: string
 }
 
-interface AppState {
-  counter: number
-}
-
-class App extends Component<AppProps, AppState> {
-  constructor(props: AppProps) {
-    super(props);
-
-    this.state = {
-      counter: 0,
-    }
+class App extends Component<AppProps> {
+  state = {
+    counter: 0,
   }
 
   onIncrement = (): void => {
